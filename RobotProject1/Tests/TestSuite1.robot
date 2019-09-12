@@ -56,6 +56,21 @@ KeywordTest
     #Close Browser
     Log    Test completed 
     
+KeywordTest1
+
+    [Documentation]    Sample login test
+    Log    Test started by %{username} in %{os}
+    Log    Name of the test is ${TEST NAME} 
+    #Open Browser    ${URL}    ${Browser}
+    Click Element    id=txtUsername
+    LoginKW    
+    Set Browser Implicit Wait    5
+    Click Element    id=welcome 
+    Set Browser Implicit Wait    5
+    Click Element    Link=Logout
+    #Close Browser
+    Log    Test completed 
+    
 *** Variables ***
 
 ${URL}   https://opensource-demo.orangehrmlive.com/
